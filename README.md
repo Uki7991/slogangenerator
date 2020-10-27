@@ -1,1 +1,0 @@
-# slogangenerator.github.io
