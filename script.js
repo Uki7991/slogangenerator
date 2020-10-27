@@ -24,7 +24,6 @@ $(document).ready(function() {
 
 	$('#generate').click(e => {
 		e.preventDefault();
-
 		generateSlogans();
 		changeSloganTitle($('#slogan_edit').val());
 	})
@@ -37,6 +36,7 @@ $(document).ready(function() {
 
 	function generateSlogans() {
 		$("#slogan_text").empty()
+		$('#generate').text('Generate more');
 		for(let i = 0; i < 3; i++) {
 			var randomIndex = Math.floor(Math.random() * (allSlogans.length + 1));
 			console.log("Displaying slogan #" + randomIndex);
