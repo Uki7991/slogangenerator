@@ -35,14 +35,16 @@ $(document).ready(function() {
 	}
 
 	function generateSlogans() {
-		$("#slogan_text").empty()
-		$('#generate').text('Generate more');
-		for(let i = 0; i < 3; i++) {
-			var randomIndex = Math.floor(Math.random() * (allSlogans.length + 1));
-			console.log("Displaying slogan #" + randomIndex);
-			let text = '<h1 data-text="'+allSlogans[randomIndex]+'">'+removeSymbols(allSlogans[randomIndex])+'</h1>';
-			$("#slogan_text").append(text);
-	
+		if ($('#slogan_edit').val() != '') {
+			$("#slogan_text").empty()
+			$('#generate').text('Generate more');
+			for(let i = 0; i < 3; i++) {
+				var randomIndex = Math.floor(Math.random() * (allSlogans.length + 1));
+				console.log("Displaying slogan #" + randomIndex);
+				let text = '<h1 data-text="'+allSlogans[randomIndex]+'">'+removeSymbols(allSlogans[randomIndex])+'</h1>';
+				$("#slogan_text").append(text);
+		
+			}
 		}
 	}
 
