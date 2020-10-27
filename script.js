@@ -5,6 +5,7 @@ $(document).ready(function() {
 	
 	$('#slogan_edit').keypress((e) => {
 		if (e.which == 13) {
+			generateSlogans();
 			changeSloganTitle($(e.currentTarget).val());
 		}
 	});
@@ -49,5 +50,5 @@ $(document).ready(function() {
 		}
 	}
 
-	generateSlogans();
+	// generateSlogans();
 });
