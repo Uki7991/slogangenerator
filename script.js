@@ -10,11 +10,6 @@ $(document).ready(function() {
 		}
 	});
 
-	$('#slogan_generator_form').submit(e => {
-		e.preventDefault();
-		changeSloganTitle($(e.currentTarget).find('input').val());
-	})
-
 	function changeSloganTitle(title) {
 		if (title != '') {
 			$('#slogan_text').find('h1').each((index, item) => {
@@ -41,6 +36,7 @@ $(document).ready(function() {
 	}
 
 	function generateSlogans() {
+		$("#slogan_text").empty()
 		for(let i = 0; i < 3; i++) {
 			var randomIndex = Math.floor(Math.random() * (allSlogans.length + 1));
 			console.log("Displaying slogan #" + randomIndex);
